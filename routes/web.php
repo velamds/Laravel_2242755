@@ -4,7 +4,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('wilkommen');
 })->middleware('auth');
 // Hey, this is mine
 Route::get('/products' , [ProductController::class , 'show']);
