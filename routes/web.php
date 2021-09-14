@@ -6,7 +6,7 @@ use App\Http\Controllers\BrandController;
 Route::get('/', function () {
     return view('welcome');
 })->middleware('auth');
-
+// Hey, this is mine
 Route::get('/products' , [ProductController::class , 'show']);
 Route::get('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
 Route::get('/product/form/{id?}', [ProductController::class, 'form'])->name('product.form');
@@ -24,7 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //     $invoice = App\Models\Invoice::findOrFail($id);
 //     return dd($invoice->products);
 // });
-use App\Http\Controllers\InvoiceController;
-Route::get('/invoices', [InvoiceController::class, 'show'])->name('invoices');
-Route::get('/invoice/form', [InvoiceController::class, 'form'])->name('invoice.form');
-Route::post('/invoice/save', [InvoiceController::class, 'save'])->name('invoice.save');
+// use App\Http\Controllers\InvoiceController;
+// Route::get('/invoices', [InvoiceController::class, 'show'])->name('invoices');
+// Route::get('/invoice/form', [InvoiceController::class, 'form'])->name('invoice.form');
+// Route::post('/invoice/save', [InvoiceController::class, 'save'])->name('invoice.save');
