@@ -5,7 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
 // HOLA MUNDO //
 Route::get('/', function () {
-    return view('welcome');
+    return view('Bienvenido');
 })->middleware('auth');
 
 Route::get('/products' , [ProductController::class , 'show']);
