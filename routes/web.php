@@ -1,8 +1,9 @@
+
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
-
+// HOLA MUNDO //
 Route::get('/', function () {
     return view('welcome');
 })->middleware('auth');
@@ -20,10 +21,6 @@ Route::post('/brand/save', [BrandController::class, 'save'])->name('brand.save')
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::get('/invoice/{id}',function($id){
-//     $invoice = App\Models\Invoice::findOrFail($id);
-//     return dd($invoice->products);
-// });
 use App\Http\Controllers\InvoiceController;
 Route::get('/invoices', [InvoiceController::class, 'show'])->name('invoices');
 Route::get('/invoice/form', [InvoiceController::class, 'form'])->name('invoice.form');
